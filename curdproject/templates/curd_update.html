@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Update Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    a{
+        color: black;
+    }
+    h3{
+        font-size: 50px;
+        font-family: cursive;
+        text-shadow: 3px 3px 3px red;
+    }
+    body{background-color: cyan;
+    }
+    .adiv{
+        margin-top: 150px;
+    }
+    form{
+        border: 2px solid red;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 20px 20px 20px red, -20px -20px 20px blue;
+    }
+</style>
+<body>
+<div class="container">
+    <center><h3>Please Insert Data</h3></center>
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                {{ uform }}
+                <center>
+                    <input type="submit" value="Update" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                </center>
+            </form>
+        </div>
+        <div class="col-md-3 adiv">
+            <a href="/#/">Goto Home Page</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
